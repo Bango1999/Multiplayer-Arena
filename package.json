@@ -1,0 +1,22 @@
+{
+  "name": "multiplayer-arena",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bango1999/Multiplayer-Arena.git"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "async": "^2.0.0-rc.4",
+    "body-parser": "^1.15.1",
+    "dotenv": "^2.0.0",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4",
+    "pug": "^3.0.2",
+    "morgan": "^1.7.0",
+    "socket.io": "^4.5.4"
+  },
+  "license": "MIT"
+}
