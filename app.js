@@ -53,7 +53,7 @@ var index = 0;
 var server  = require('http').createServer(app);
 var io      = require('socket.io')(server, {
   cors: {
-       origin: "http://localhost:3000",
+       origin: "https://arena.swango.xyz",
        methods: ["GET", "POST"],
        transports: ['websocket'],
        credentials: false
