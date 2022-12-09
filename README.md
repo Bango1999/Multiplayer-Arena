@@ -6,9 +6,9 @@
 - **Live Demo**: N/A
 
 
-## The Client
+### The Client
 
-### Overview
+#### Overview
 - It holds a local player (game) state, as defined by inputs the user makes, as well as updates received from the server
 - It uses a main recursive loop `play()`, which calls itself every 20ms until turned off
 - On page load, the loop is not running. When the loop toggle is flipped on, `play()` is called
@@ -17,14 +17,14 @@
 - Uses a few CSS and JS libraries, mainly jquery and bootstrap, and various jquery extensions
 
 
-### Game Loop
+#### Game Loop
 The `play()` function will
  - process user movement
  - send a position update to the server (if needed)
  - draw the canvas state, as defined by their local game state mentioned above
  - check if the user paused before calling play again after 20 milliseconds
 
-### Sockets
+#### Sockets
 Web sockets (socket.io) is used for client/server communication of game state
 - Client sends its position to the server if it detects a keypress occurring in the current loop
 - The client processes user input and sends an update to the server at virtually the same time. If there are no keypresses detected, socket update step will be skipped
@@ -32,7 +32,7 @@ Web sockets (socket.io) is used for client/server communication of game state
 - Even when the loop is not running, the client is still receiving socket updates from the server
 
 
-## The Server
+### The Server
 
 - Processes new socket connections and disconnections
 - Maintains a master state (for the game canvas)
@@ -40,12 +40,12 @@ Web sockets (socket.io) is used for client/server communication of game state
 - When a socket update is received, it will update its master state and emit that player's new state to all connected sockets
 
 
-Prerequisites
+## Prerequisites
 -------------
 - [Node.js](http://nodejs.org)
 
 
-Getting Started
+## Getting Started
 ---------------
 
 ```bash
